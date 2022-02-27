@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8139E0D5-4ECA-419E-A1F2-F49AF4B3A2FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ManagementStorage</RootNamespace>
+    <AssemblyName>ManagementStorage</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class_Global.cs" />
+    <Compile Include="Control_click.cs" />
+    <Compile Include="Exportation.cs" />
+    <Compile Include="FormNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNew.Designer.cs">
+      <DependentUpon>FormNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_accueil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_accueil.Designer.cs">
+      <DependentUpon>Form_accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_login.Designer.cs">
+      <DependentUpon>Form_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_produit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="form_produit.Designer.cs">
+      <DependentUpon>form_produit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_releve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_releve.Designer.cs">
+      <DependentUpon>Form_releve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_vente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_vente.Designer.cs">
+      <DependentUpon>Form_vente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gestionReleve.cs" />
+    <Compile Include="MyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm.Designer.cs">
+      <DependentUpon>MyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produit.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StockPrDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockPrDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ventes.cs" />
+    <EmbeddedResource Include="FormNew.resx">
+      <DependentUpon>FormNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_accueil.resx">
+      <DependentUpon>Form_accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_login.resx">
+      <DependentUpon>Form_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_produit.resx">
+      <DependentUpon>form_produit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_releve.resx">
+      <DependentUpon>Form_releve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_vente.resx">
+      <DependentUpon>Form_vente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="StockPrDataSet.xsc">
+      <DependentUpon>StockPrDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StockPrDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockPrDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StockPrDataSet.xss">
+      <DependentUpon>StockPrDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secrecy-icon %281%29.png" />
+    <None Include="Resources\secrecy-icon %282%29.png" />
+    <None Include="Resources\general_tech.jpg" />
+    <None Include="Resources\IMG-20200715-WA0044.jpg" />
+    <None Include="Resources\IMG-20200715-WA0039.jpg" />
+    <None Include="Resources\IMG-20200715-WA0041.jpg" />
+    <Content Include="StockPr.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
